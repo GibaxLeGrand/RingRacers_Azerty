@@ -643,6 +643,10 @@ INT32 CON_ShiftChar(INT32 ch)
 		// Standard Latin-script uppercase translation
 		if (shiftdown ^ capslock)
 			ch = shiftxform[ch];
+		else if (altdown & 0x2)
+		{
+			ch = french_altgrxform[ch];
+		}
 	}
 	else if (ch >= KEY_KEYPAD7 && ch <= KEY_KPADDEL)
 	{
@@ -667,6 +671,10 @@ INT32 CON_ShiftChar(INT32 ch)
 		// QWERTY keycode translation
 		if (shiftdown)
 			ch = shiftxform[ch];
+		else if (altdown & 0x2)
+		{
+			ch = french_altgrxform[ch];
+		}
 	}
 
 	return ch;

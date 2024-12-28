@@ -22,6 +22,16 @@ extern "C" {
 // ascii codes are 0->127,
 // scancodes are 0x80 + 0->127
 
+#define KEY_FR_E_AIGUE (0x80 + 2)
+#define KEY_FR_E_GRAVE (0x80 + 10)
+#define KEY_FR_C_CEDILLE (0x80 + 7)
+#define KEY_FR_A_GRAVE (0x80 + 5)
+#define KEY_FR_U_GRAVE (0x80 + 13)
+
+
+
+
+
 #define KEY_NULL      0 // null key, triggers nothing
 #define KEY_BACKSPACE 8
 #define KEY_TAB       9
